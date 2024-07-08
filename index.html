@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body">
+    <div class="topbar">
+        <div class="topbar-contain">
+            <div class="topavatar">
+                <div class="welcome">Welcome, Essie!</div>
+                <div class="avatar">
+                    <img src="image1.jpeg">
+                    <div class="nametext">Essie Howel</div>
+                    <button type="button" class="plus">+</button>
+                </div>
+            </div>
+            <div class="top-container">
+                <div class="logo-text">
+                    <a href="#">Broadash</a>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                <div class="icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drop">
+        <div>
+            <button type="button" class="dropdown">Category <i class="fa-solid fa-chevron-down" style="opacity: 1;"></i></button>
+        </div>
+        <div class="down">
+            <a href="#">User</a>
+        </div>
+        <div class="down">
+            <a href="#">Project</a>
+        </div>
+    </div>
+    <div class="menu-box">
+        <div class="inbox-box">
+            <i class="fa-solid fa-bell"></i>
+            <div class="inbox-text">Inbox</div>
+        </div>
+        <div class="inbox-box" id="Profile">
+            <i class="fa-solid fa-user"></i>
+            <div class="inbox-text">Profile</div>
+        </div>
+        <div class="inbox-box">
+            <i class="fa-solid fa-power-off"></i>
+            <div class="inbox-text">Logout</div>
+        </div>
+    </div>
+    <div class="bell">
+        <a href="#"><i class="fa-solid fa-bell"></i></a>
+    </div>
+    <div class="navigation">
+        <nav>
+        <div class="menu">
+            <div class="avatar-text">
+                 <div class="avatra">
+                     <img src="image1.jpeg">
+                 </div>
+                 <div class="word">
+                    <div class="essie">Welcome,Essie</div>
+                    <div class="admin">Admin</div>
+                </div>
+            </div>
+            <div class="save-image">
+                <img src="image4.png">
+            </div>
+            <div class="menu-boxes">
+            <div class="inbox">
+                <i class="fa-solid fa-list"></i>
+                <div class="inbox-text">Overview</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-bookmark"></i>
+                <div class="inbox-text">Reservation</div>
+            </div>
+            <div class="inbox" id="meeting">
+                <i class="fa-brands fa-squarespace" style="color: blue;"></i>
+                <div class="inbox-text">Meeting</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-users"></i>
+                <div class="inbox-text">Customers</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-ticket-simple"></i>
+                <div class="inbox-text">Ticket</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-suitcase-medical"></i>
+                <div class="inbox-text">Support</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-user"></i>
+                <div class="inbox-text">Profile</div>
+            </div>
+            <div class="inbox">
+                <i class="fa-solid fa-power-off"></i>
+                <div class="inbox-text">Logout</div>
+            </div>
+            </div>
+        </div>
+        </nav>
+       <div class="master">
+          <div class="container">
+          <div class="heading">
+            <h1>Meetings</h1>
+          </div>
+         <div class="container1">
+            <div class="image1">
+                <div class="calender">
+                    <div class="cal">
+                        <img src="image2.png">
+                    </div>
+                    <div class="dashboard-text">Number of Meetings</div>
+                </div>
+                <div class="dash">
+                    <div class="number-dashboard">36</div>
+                    <div class="detext">This Month</div>
+                </div>
+            </div>
+            <div class="image1">
+                <div class="calender">
+                    <div class="cal">
+                        <img src="image3.png">
+                    </div>
+                    <div class="dashboard-text">Rescheduled Meetings</div>
+                </div>
+                <div class="dash">
+                   <div class="number-dashboard">14</div>
+                   <div class="detext">This Month</div>
+                </div>
+            </div>
+            <div class="image1">
+                <div class="calender">
+                    <div class="cal">
+                        <img src="image3.png">
+                    </div>
+                    <div class="dashboard-text">Cancelled Meetings</div>
+                </div>
+                <div class="dash">
+                   <div class="number-dashboard">20</div>
+                   <div class="detext">This Month</div>
+                </div>
+            </div>
+        </div>
+        <div class="number-meetings">Today-6 Meetings</div>
+          </div>
+          <div id="loops"></div>
+       </div>
+    </div>
+    <div class="inbox-contain">
+        <div class="inbox-item">
+            <div class="meetingRight">
+                <div>Virgil added you in  the meeting</div>
+            </div>
+            <div class="item-inbox">
+                <div class="item1-inbox"></div>
+                <div class="item-text">9:59</div>
+            </div>
+            <div class="claimgin"></div>
+            <div class="togglediv">
+                <div class="block-9">
+                    <a href="#" class="link-block">
+                        <div class="toglebutton"></div>
+                    </a>
+                </div>
+                <div class="block-10">
+                    <div class="goingtext">
+                    </div>
+                </div>
+            </div> 
+                <div class="iteminboxdiv">
+                    <div class="item2-inbox">
+                        <div class="block-8"></div>
+                        <div class="item-text">9:59</div>
+                    </div>
+                    <div>
+                        <div>Sales Presentation with Miguel-Daily catch up</div>
+                        <div class="inbox-number">20 people joining</div>
+                    </div>
+                </div>
+                <div class="iteminboxdiv">
+                    <div class="item2-inbox">
+                        <div class="block-8"></div>
+                        <div class="item-text">9:59</div>
+                    </div>
+                    <div>
+                        <div>Team voting for outing</div>
+                        <div class="w-form">
+                            <form id="email" class="form-2">
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <label for="dining">Dining</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <label for="movie">Movie-spiderman</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <label for="football">Football Touranament</label>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox">
+                                    <label for="trip">Mountain trip</label>
+                                </div>
+                                <button type="submit" data-wait="please wait ..." class="submitbutton">Submit</button>
+                            </form>
+                        </div>
+                        <div class="success w-form-done">
+                            <div>Thank you! we can't wait to reward this team for all it's hard work</div>
+                        </div>
+                        <div class="w-form-fail">
+                            <div>Oops something went wrong</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttondiv">
+                    <a href="#" class="refreshbutton"><div>Refresh</div></a>
+                    <a href="#" class="closebutton"><div>Close</div></a>
+                </div>
+                <div class="lastdiv">
+                    <div class="meetingRight"></div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="bell1">
+                                <a href="#"><i class="fa-solid fa-bell"></i></a>
+                            </div>
+                        </div>
+                        <div class="column1">
+                            <div>Inbox</div>
+                            <div class="inboxdate"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
