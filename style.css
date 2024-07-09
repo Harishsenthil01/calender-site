@@ -1049,11 +1049,14 @@
     .search {
         background-color: #eee;
         border-radius: 5px;
-        margin-right: 20px;
     }
     .search i {
         opacity: 0.3;
         padding-inline: 7px;
+        float: left;
+        margin-block: 10px;
+        /* margin-inline: 29px; */
+        width: 40px;
     }
 
     .search input {
@@ -1706,11 +1709,15 @@
     .search {
         background-color: #eee;
         border-radius: 5px;
-        margin-right: 20px;
+       
     }
     .search i {
         opacity: 0.3;
         padding-inline: 7px;
+        float: left;
+        margin-block: 10px;
+        /* margin-inline: 29px; */
+        width: 40px;
     }
 
     .search input {
@@ -2364,11 +2371,15 @@
     .search {
         background-color: #eee;
         border-radius: 5px;
-        margin-right: 20px;
+       
     }
     .search i {
         opacity: 0.3;
         padding-inline: 7px;
+        float: left;
+        margin-block: 10px;
+        /* margin-inline: 29px; */
+        width: 40px;
     }
 
     .search input {
@@ -3039,11 +3050,15 @@
     .search {
         background-color: #eee;
         border-radius: 5px;
-        margin-right: 20px;
+        
     }
     .search i {
         opacity: 0.3;
         padding-inline: 7px;
+        float: left;
+        margin-block: 10px;
+        /* margin-inline: 29px; */
+        width: 40px;
     }
 
     .search input {
