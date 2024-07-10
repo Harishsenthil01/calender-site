@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             successMessage.style.display = 'block';
         }
     });
+    
     // const profileButton = document.getElementById('profile');
     // const inboxContain = document.querySelector('.inbox-contain');
     // profileButton.addEventListener('click', (event) => {
@@ -113,11 +114,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 data.user.forEach((user) => {
                     const frame = `
                         <div class="card">
+                          <div class="flex">
                             <img id="top" src="${user.imgurl}" alt="img">
                             <div class="text-comp">
                                 <p>${user.name}</p>
                                 <p id="mail">${user.email}</p>
+                                <div class="date1">${user.time}</div>
                             </div>
+                          </div>
+                          <hr>
                             <div class="all">
                                 <div class="pic">
                                     <div class="component">
@@ -135,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <p id="join">${user.joining}</p>
                                 </div>
                             </div>
+                            <hr>
                             <div class="day">
                                 <div class="date">${user.time}</div>
                                 <div class="block">${user.details}</div>
