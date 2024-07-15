@@ -174,3 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Call the function to fetch and display the data
     fetchJSONData();
 });
+document.querySelectorAll('.plus-container').forEach(container => {
+    const plusButton = container.querySelector('.plus');
+    const menuBox = container.querySelector('.menu-box');
+
+    plusButton.addEventListener('click', function () {
+        menuBox.classList.toggle('show');
+    });
+});

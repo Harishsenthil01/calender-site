@@ -21,9 +21,18 @@
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
 
-    .topavatar {
+    .division{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 10px;
+    }
+    .essie1{
         display: flex;
         justify-content: center;
+    }
+    .essie2{
+        display: none;
     }
     .welcome{
         display: none;
@@ -148,6 +157,7 @@
     display: flex;
     justify-content: center; /* Center items horizontally */
     border-radius: 10px;
+    padding-inline: 10px;
 }
 
 .image1 {
@@ -163,17 +173,14 @@
     background-color: #f6f6f6;
     border-radius: 50%;
     height: 80px;
-    width: 80px; /* Ensure a square shape */
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image1 img {
     width: 38px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
 }
 .dashboard-text{
     text-align: center;
@@ -349,9 +356,17 @@
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
 
-    .topavatar {
+    .division{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+    .essie1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .essie2{
+        display: none;
     }
     .avatar{
         display: flex;
@@ -502,7 +517,6 @@
     .image1 img {
         width: 38px;
         height: 50px;
-        border-radius: 50%;
         margin-left: 20px;
             margin-right: 20px;
             margin-top: 20px;
@@ -681,10 +695,6 @@
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
 
-    .topavatar {
-        display: flex;
-        justify-content: space-between;
-    }
     .avatar{
         display: flex;
     }
@@ -699,7 +709,18 @@
         border-radius: 50%;
         height: 40px;
     }
-   
+    .division{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .essie1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .essie2{
+        display: none;
+    }
     .nametext {
         display: inline-block;
         margin-top: 9px;
@@ -837,7 +858,6 @@
     .image1 img {
         width: 38px;
         height: 50px;
-        border-radius: 50%;
     }
     .dashboard-text{
         font-size: 15px;
@@ -958,13 +978,13 @@
     .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 9px;
     }
     .date{
        display: none;
     }
     .block{
         text-align: center;
+        padding-block: 10px;
     }
     .plus{
         display: none;
@@ -1024,14 +1044,16 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
-        padding: 15px 10px 0px;
         background-color: #fff;
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
-
+    .topbar-contain{
+        padding-block: 10px;
+    }
     .topavatar {
         display: flex;
-        justify-content: end;
+        justify-content: space-around;
+        align-items: center;
     }
     .avatar{
         display: flex;
@@ -1044,7 +1066,12 @@
         border-radius: 50%;
         height: 40px;
     }
-   
+    .essie1{
+        display: none;
+    }
+    .division{
+        display: contents;
+    }
     .nametext {
         display: inline-block;
         margin-top: 9px;
@@ -1162,43 +1189,42 @@
     .dropdown {
         cursor: pointer;
     }
-    .menu-box{
-        display: flex;
+    .menu-box {
+        display: none; /* Initially hidden */
         flex-direction: column;
-        display: none;
-        position: absolute;
         position: absolute;
         z-index: 400;
         width: 160px;
         margin-top: 1px;
         margin-left: -110px;
-        padding: 15px 0px;
         border-radius: 5px;
         background-color: #fff;
-        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, .79);
+        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, 0.79);
     }
+    
+    .menu-box.show {
+        display: block; /* Show the menu box when .show class is added */
+    }
+    
     .inbox-box{
-        background-color: #fff;
-        border: none;
-        padding-block: 10px;
-        width: 130px;
-        color: white;
-        font-size: 15px;
-        color: black;
-        opacity: 0.5;
-        display: flex;
-        justify-content: space-around;
+        display: block;
+        padding: 10px 0;
+        color: #a0a0a0;
+        text-decoration: none;
         cursor: pointer;
-    }
+        transition: all 0.5s ease-in-out;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        padding-inline: 30px;
+        margin-block: 25px;
+        }
 
     .inbox-box:hover{
         border-left: 3px solid blue;
         color: blue;
     }
     
-    .menu-box.show {
-        display: flex;
-    }
+    
     .navigation{
         display: flex;
         max-width: 1200px;
@@ -1218,14 +1244,20 @@
         transition: opacity 0.5s ease;
     }
     .inbox{
-        display: flex;
-        margin-left: 20px;
-        padding: 20px;
-        align-items: center;
-        justify-content: space-evenly;
-        color: #a0a0a0;
-        cursor: pointer;
-        margin-top: 10px;
+        display: block;
+    padding: 10px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    padding-inline: 30px;
+    margin-block: 25px;
+    }
+    .inbox-text{
+        padding-inline: 40px;
+        margin-top: -17px;
     }
     .avatar img{
         width: 40px;
@@ -1234,19 +1266,21 @@
         display: flex;
     }
     .avatra img{
-        width: 60px;
+        width: 40px;
+        border-radius: 5px;
+        height: 40px;
     }
     .avatar-text{
         display: flex;
     align-items: center;
-    justify-content: center;
+    padding-inline:25px
     }
     .avatra{
         margin-top: 25px;
     }
     .word{
         margin-top: 25px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: #a0a0a0;
     }
     #meeting{
@@ -1288,8 +1322,7 @@
     
     .image1 img {
         width: 38px;
-        height: 50px;
-        border-radius: 50%;
+        height: 38px;
 
     }
     .dashboard-text{
@@ -1311,7 +1344,7 @@
         font-size: 10px;
         font-weight: 400;
         text-align: center;
-        display: inline-block;
+        margin-top: -30px;
     }
     .number-meetings{
         margin-top: 25px;
@@ -1337,6 +1370,7 @@
             flex-direction: column;
             border: 1px none;
             background-color: white;
+            height: 230px;
     }
     .card img {
         max-width: 100%;
@@ -1418,14 +1452,15 @@
     .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 7px;
-        border-radius: 5px;
+        /* padding-block: 7px;
+        border-radius: 5px; */
     }
     .date{
        display: none;
     }
     .block{
         text-align: center;
+        padding-block: 15px;
     }
     .master{
         width: 100%;
@@ -1692,8 +1727,8 @@
     .block:hover{
         background-color: #2290ff;
         color: white;
-    padding-block: 7px;
-    border-radius: 5px;
+    /* padding-block: 7px;
+    border-radius: 5px; */
 
     }
     hr{
@@ -1720,14 +1755,16 @@
         display: block;
         margin-right: auto;
         margin-left: auto;
-        padding: 15px 10px 0px;
         background-color: #fff;
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
-
+    .topbar-contain{
+        padding-block: 10px;
+    }
     .topavatar {
         display: flex;
-        justify-content: end;
+        justify-content: space-around;
+        align-items: center;
     }
     .avatar{
         display: flex;
@@ -1740,7 +1777,12 @@
         border-radius: 50%;
         height: 40px;
     }
-   
+    .essie1{
+        display: none;
+    }
+    .division{
+        display: contents;
+    }
     .nametext {
         display: inline-block;
         margin-top: 9px;
@@ -1775,7 +1817,7 @@
         background-color: #eee;
         border: none;
         padding-block: 10px;
-        width: 280px;
+        width: 350px;
         border-radius: 10px;
         font-size: 15px;
     }
@@ -1858,41 +1900,41 @@
     .dropdown {
         cursor: pointer;
     }
-    .menu-box{
-        display: flex;
+    .menu-box {
+        display: none; /* Initially hidden */
         flex-direction: column;
-        display: none;
         position: absolute;
         z-index: 400;
         width: 160px;
         margin-top: 1px;
         margin-left: -110px;
-        padding: 15px 0px;
         border-radius: 5px;
         background-color: #fff;
-        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, .79);
+        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, 0.79);
     }
+    
+    .menu-box.show {
+        display: block; /* Show the menu box when .show class is added */
+    }
+    
     .inbox-box:hover{
         border-left: 3px solid blue;
         color: blue;
     }
     .inbox-box{
-        background-color: #fff;
-        border: none;
-        padding-block: 10px;
-        width: 130px;
-        color: white;
-        font-size: 15px;
-        color: black;
-        opacity: 0.5;
-        display: flex;
-        justify-content: space-around;
-        cursor: pointer;
+        display: block;
+    padding: 10px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    padding-inline: 30px;
+    margin-block: 25px;
     }
+
     
-    .menu-box.show {
-        display: flex;
-    }
     .navigation{
         display: flex;
         max-width: 1200px;
@@ -1911,15 +1953,21 @@
         z-index: 1000; /* Ensure it's above other content */
         transition: opacity 0.5s ease;
     }
-    .inbox{
-        display: flex;
-        margin-left: 20px;
-        padding: 20px;
-        align-items: center;
-        justify-content: space-evenly;
-        color: #a0a0a0;
-        cursor: pointer;
-        margin: 10px;
+   .inbox{
+        display: block;
+    padding: 10px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    padding-inline: 30px;
+    margin-block: 25px;
+    }
+    .inbox-text{
+        padding-inline: 40px;
+        margin-top: -17px;
     }
     .avatar img{
         width: 40px;
@@ -1928,19 +1976,21 @@
         display: flex;
     }
     .avatra img{
-        width: 60px;
+        width: 40px;
+        border-radius: 5px;
+        height: 40px;
     }
     .avatar-text{
         display: flex;
     align-items: center;
-    justify-content: center;
+   padding-inline: 25px;
     }
     .avatra{
         margin-top: 25px;
     }
     .word{
         margin-top: 25px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: #a0a0a0;
     }
     #meeting{
@@ -1982,8 +2032,7 @@
     
     .image1 img {
         width: 38px;
-        height: 50px;
-        border-radius: 50%;
+        height: 38px;
        
     }
     .dashboard-text{
@@ -2004,7 +2053,7 @@
         font-size: 10px;
         font-weight: 400;
         text-align: center;
-        display: inline-block;
+        margin-top: -30px;
     }
     .number-meetings{
         margin-top: 25px;
@@ -2030,6 +2079,7 @@
             flex-direction: column;
             border: 1px none;
             background-color: white;
+            height: 240px;
     }
     .card img {
         max-width: 100%;
@@ -2110,14 +2160,15 @@
     .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 7px;
-        border-radius: 5px;
+        /* padding-block: 7px;
+        border-radius: 5px; */
     }
     .date{
         display: none;
     }
     .block{
         text-align: center;
+        padding-block: 15px;
     }
     .master{
         width: 100%;
@@ -2383,8 +2434,8 @@
 .block:hover{
     background-color: #2290ff;
     color: white;
-    padding-block: 7px;
-    border-radius: 5px;
+    /* padding-block: 7px;
+    border-radius: 5px; */
 }
 hr{
     margin-top: 15px;
@@ -2393,7 +2444,8 @@ hr{
 .lastdiv{
     display: none;
 }
-    }
+}
+    
 
 
 @media screen and (min-width: 1441px) and (max-width: 1714px) {
@@ -2407,14 +2459,16 @@ hr{
         display: block;
         margin-right: auto;
         margin-left: auto;
-        padding: 15px 10px 0px;
         background-color: #fff;
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
-
+    .topbar-contain{
+        padding-block: 10px;
+    }
     .topavatar {
         display: flex;
-        justify-content: end;
+        justify-content: space-around;
+        align-items: center;
     }
     .avatar{
         display: flex;
@@ -2427,7 +2481,12 @@ hr{
         border-radius: 50%;
         height: 40px;
     }
-   
+    .essie1{
+        display: none;
+    }
+    .division{
+        display: contents;
+    }
     .nametext {
         display: inline-block;
         margin-top: 9px;
@@ -2462,7 +2521,7 @@ hr{
         background-color: #eee;
         border: none;
         padding-block: 10px;
-        width: 280px;
+        width: 350px;
         border-radius: 10px;
         font-size: 15px;
     }
@@ -2555,40 +2614,42 @@ hr{
     .dropdown {
         cursor: pointer;
     }
-    .menu-box{
-        display: flex;
+    .menu-box {
+        display: none; /* Initially hidden */
         flex-direction: column;
-        display: none;
         position: absolute;
         z-index: 400;
         width: 160px;
         margin-top: 1px;
         margin-left: -110px;
-        padding: 15px 0px;
+        
         border-radius: 5px;
         background-color: #fff;
-        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, .79);
+        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, 0.79);
     }
+    
+    .menu-box.show {
+        display: block; /* Show the menu box when .show class is added */
+    }
+    
     .inbox-box:hover{
         border-left: 3px solid blue;
         color: blue;
     }
     .inbox-box{
-        background-color: #fff;
-        border: none;
-        padding-block: 10px;
-        width: 130px;
-        color: white;
-        font-size: 15px;
-        color: black;
-        opacity: 0.5;
-        display: flex;
-        justify-content: space-around;
+        display: block;
+        padding: 10px 0;
+        color: #a0a0a0;
+        text-decoration: none;
         cursor: pointer;
-    }
-    .menu-box.show {
-        display: flex;
-    }
+        transition: all 0.5s ease-in-out;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        padding-inline: 30px;
+        margin-block: 25px;
+        }
+    
+    
     .navigation{
         display: flex;
         max-width: 1200px;
@@ -2608,14 +2669,20 @@ hr{
         transition: opacity 0.5s ease;
     }
     .inbox{
-        display: flex;
-        margin-left: 20px;
-        padding: 20px;
-        align-items: center;
-        justify-content: space-evenly;
-        color: #a0a0a0;
-        cursor: pointer;
-        margin: 10px;
+        display: block;
+    padding: 10px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    padding-inline: 30px;
+    margin-block: 25px;
+    }
+    .inbox-text{
+        padding-inline: 40px;
+        margin-top: -17px;
     }
     .avatar img{
         width: 40px;
@@ -2624,19 +2691,21 @@ hr{
         display: flex;
     }
     .avatra img{
-        width: 60px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
     }
     .avatar-text{
         display: flex;
     align-items: center;
-    justify-content: center;
+    padding-inline: 25px;
     }
     .avatra{
         margin-top: 25px;
     }
     .word{
         margin-top: 25px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: #a0a0a0;
     }
     #meeting{
@@ -2678,8 +2747,7 @@ hr{
     
     .image1 img {
         width: 38px;
-        height: 50px;
-        border-radius: 50%;
+        height: 38px;
     }
     .dashboard-text{
         margin-left: 20px;
@@ -2699,7 +2767,7 @@ hr{
         font-size: 10px;
         font-weight: 400;
         text-align: center;
-        display: inline-block;
+        margin-top: -30px;
     }
     .number-meetings{
         margin-top: 25px;
@@ -2725,6 +2793,7 @@ hr{
             flex-direction: column;
             border: 1px none;
             background-color: white;
+            height: 240px;
     }
     .card img {
         max-width: 100%;
@@ -2805,14 +2874,15 @@ hr{
     .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 7px;
-        border-radius: 5px;
+        /* padding-block: 7px;
+        border-radius: 5px; */
     }
     .date{
        display: none;
     }
     .block{
         text-align: center;
+        padding-block: 15px;
     
     }
     .master{
@@ -3098,8 +3168,8 @@ hr{
 .block:hover{
     background-color: #2290ff;
     color: white;
-    padding-block: 7px;
-    border-radius: 5px;
+    /* padding-block: 7px;
+    border-radius: 5px; */
 } 
 hr{
     margin-top: 15px;
@@ -3121,14 +3191,16 @@ hr{
         display: block;
         margin-right: auto;
         margin-left: auto;
-        padding: 15px 10px 0px;
         background-color: #fff;
         box-shadow: 1px 1px 17px -1px hsla(0, 0%, 63%, .69);
     }
-
+    .topbar-contain{
+        padding-block: 10px;
+    }
     .topavatar {
         display: flex;
-        justify-content: end;
+        justify-content: space-around;
+        align-items: center;
     }
     .avatar{
         display: flex;
@@ -3140,6 +3212,12 @@ hr{
         width: 40px;
         border-radius: 50%;
         height: 40px;
+    }
+    .essie1{
+        display: none;
+    }
+    .division{
+        display: contents;
     }
    
     .nametext {
@@ -3176,7 +3254,7 @@ hr{
         background-color: #eee;
         border: none;
         padding-block: 10px;
-        width: 280px;
+        width: 350px;
         border-radius: 10px;
         font-size: 15px;
     }
@@ -3268,40 +3346,42 @@ hr{
     .dropdown {
         cursor: pointer;
     }
-    .menu-box{
-        display: flex;
+    .menu-box {
+        display: none; /* Initially hidden */
         flex-direction: column;
-        display: none;
         position: absolute;
         z-index: 400;
         width: 160px;
         margin-top: 1px;
         margin-left: -110px;
-        padding: 15px 0px;
+       
         border-radius: 5px;
         background-color: #fff;
-        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, .79);
+        box-shadow: 0 4px 6px -3px hsla(0, 0%, 63%, 0.79);
     }
+    
+    .menu-box.show {
+        display: block; /* Show the menu box when .show class is added */
+    }
+    
     .inbox-box{
-        background-color: #fff;
-        border: none;
-        padding-block: 10px;
-        width: 130px;
-        color: white;
-        font-size: 15px;
-        color: black;
-        opacity: 0.5;
-        display: flex;
-        justify-content: space-around;
+        display: block;
+        padding: 10px 0;
+        color: #a0a0a0;
+        text-decoration: none;
         cursor: pointer;
-    }
+        transition: all 0.5s ease-in-out;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        padding-inline: 30px;
+        margin-block: 25px;
+        }
+    
     .inbox-box:hover{
         border-left: 3px solid blue;
         color: blue;
     }
-    .menu-box.show {
-        display: flex;
-    }
+   
     .navigation{
         display: flex;
         max-width: 1200px;
@@ -3321,14 +3401,20 @@ hr{
         transition: opacity 0.5s ease;
     }
     .inbox{
-        display: flex;
-        margin-left: 20px;
-        padding: 20px;
-        align-items: center;
-        justify-content: space-evenly;
-        color: #a0a0a0;
-        cursor: pointer;
-        margin: 10px;
+        display: block;
+    padding: 10px 0;
+    color: #a0a0a0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    padding-inline: 30px;
+    margin-block: 25px;
+    }
+    .inbox-text{
+        padding-inline: 40px;
+        margin-top: -17px;
     }
     .avatar img{
         width: 40px;
@@ -3337,19 +3423,21 @@ hr{
         display: flex;
     }
     .avatra img{
-        width: 60px;
+        width: 40px;
+        border-radius: 5px;
+        height: 40px;
     }
     .avatar-text{
         display: flex;
     align-items: center;
-    justify-content: center;
+    padding-inline: 25px;
     }
     .avatra{
         margin-top: 25px;
     }
     .word{
         margin-top: 25px;
-        margin-left: 10px;
+        margin-left: 20px;
         color: #a0a0a0;
     }
     #meeting{
@@ -3391,8 +3479,7 @@ hr{
     
     .image1 img {
         width: 38px;
-        height: 50px;
-        border-radius: 50%;
+        height: 38px;
         
     }
     .dashboard-text{
@@ -3414,6 +3501,7 @@ hr{
         font-weight: 400;
         text-align: center;
         display: inline-block;
+        margin-top: -30px;
     }
     .number-meetings{
         margin-top: 25px;
@@ -3439,6 +3527,7 @@ hr{
             flex-direction: column;
             border: 1px none;
             background-color: white;
+            height: 240px;
     }
     .card img {
         max-width: 100%;
@@ -3519,14 +3608,15 @@ hr{
     .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 7px;
-        border-radius: 5px;
+        /* padding-block: 7px;
+        border-radius: 5px; */
     }
     .date{
         display: none;
     }
     .block{
         text-align: center;
+        padding-block: 15px;
    
     }
     .master{
@@ -3812,8 +3902,8 @@ hr{
 .block:hover{
     background-color: #2290ff;
     color: white;
-    padding-block: 7px;
-    border-radius: 5px;
+    /* padding-block: 7px;
+    border-radius: 5px; */
 
 }
 hr{
