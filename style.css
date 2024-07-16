@@ -125,11 +125,16 @@
     }
 
     .inbox {
-        display: flex;
-        margin-left: 20px;
-        padding: 15px;
-        align-items: center;
-       
+        display: block;
+        padding: 10px 0;
+        /* color: #a0a0a0; */
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        padding-inline: 30px;
+        margin-block: 5px;
     }
 
     .inbox i {
@@ -139,7 +144,8 @@
 
     .inbox-text {
         opacity: 0.5;
-        margin-left: 60px;
+        margin-left: 50px;
+        margin-top: -17px;
     }
     #meeting{
         border-left: 4px solid blue;
@@ -299,6 +305,7 @@
 }
 .day .date, .day .block {
     cursor: pointer;
+    padding: 8px;
 }
 
 /* Active state styles */
@@ -307,11 +314,9 @@
     color: white;
     padding-block: 10px;
 } */
-.date.active, .block.active {
+ .block.active {
     background-color: #2290ff;
     color: white;
-    padding-block: 12px;
-    padding-inline: 10px;
 }
 .plus{
     display: none;
@@ -361,6 +366,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-block: 10px;
     }
     .essie1{
         display: flex;
@@ -464,22 +470,26 @@
     }
 
     .inbox {
-        display: flex;
-        margin-left: 20px;
-        padding: 15px;
-        align-items: center;
-       
+        display: block;
+        padding: 10px 0;
+        /* color: #a0a0a0; */
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        border-left: 4px solid transparent;
+        box-sizing: border-box;
+        padding-inline: 50px;
+        margin-block: 5px;
     }
 
     .inbox i {
         opacity: 0.5;
-        padding-right: 10px;
-        margin-left: 80px;
     }
 
     .inbox-text {
         opacity: 0.5;
-        margin-left: 180px;
+        margin-left: 60px;
+        margin-top: -17px;
     }
     #meeting{
         border-left: 4px solid blue;
@@ -634,6 +644,8 @@
     }
     .day .date, .day .block {
         cursor: pointer;
+        padding: 10px;
+        padding-inline: 30px;
     }
     
     /* Active state styles */
@@ -643,11 +655,9 @@
         padding-block: 12px;
         padding-inline: 10px;
     } */
-    .date.active, .block.active {
+    .block.active {
         background-color: #2290ff;
         color: white;
-        padding-block: 12px;
-        padding-inline: 10px;
     }
     .plus{
         display: none;
@@ -714,6 +724,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-block: 10px;
     }
     .essie1{
         display: flex;
